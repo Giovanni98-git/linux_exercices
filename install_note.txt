@@ -1,0 +1,59 @@
+ 1*) Après installation de Ubuntu allez dans le terminal puis faites un update en lancant la commande suivante:
+	sudo apt-get update
+
+2*) Installez nodejs en tapant ceci:
+	sudo apt-get install nodejs
+
+3*) Installez le gestionnaire de paquets de nodejs:
+	sudo apt-get install npm
+
+4*) Installez n dans le but de mettre a jour nodejs vers la version stable:
+	sudo npm install -g n
+
+5*) Installez la version lts de nodejs en tapant ceci:
+	sudo n lts
+
+6*) Mettre la version mise à jour en marche
+nous devons d'abord supprimer l'ancienne version:
+ * Supprimer le racourcis de node en tapant:
+ 	sudo rm /usr/bin/node
+ * Définir le nouveau raccourcis  vers la nouvelle version:
+  sudo ln -s /usr/local/bin/node /usr/bin/node
+  
+ 7*) Pour installer vs-code vous tapez ceci:
+ 	sudo snap install code --classic
+ 
+ 8*) Pour installer vlc:
+ 	sudo snap install vlc --stable
+ 
+ 9*)Pour installer postman:
+ 	sudo snap install postman
+ 
+ 10*) Pour installer chromium il faut plusieurs étapes:
+  - rechercher chromium dans le stockage de snap d'abord: 
+  	snap search chromium
+  - installer chromium:
+  	sudo snap install chromium
+  - installer chromium-ffmpeg
+  	sudo snap install chromium-ffmpeg
+  
+  11*) faire maintenant un upgrade général avec:
+  	sudo apt-get upgrade
+
+  12*) Configurer gitlab et github
+  - Dans un premier temps se connecter il faut se connecter à son compte
+  - Aller à cette adresse et essayer d'ajouter une nouvelle clé:
+  * Pour github 
+  https://github.com/settings/keys
+  * Pour gitlab:
+  https://gitlab.com/-/user_settings/ssh_keys
+  - Revenir dans son terminal et générer une clé :
+  	ssh-keygen -t ed25519 -C "email_du_compte"
+  - Vérifier si ssh-agent est en cours pour enregistrer la clé dans la marchine:
+  	eval "$(ssh-agent -s)"
+    reponse possible: Agent pid 13621
+  - Ajouter la clé à ssh-agent:
+  	ssh-add ~/.ssh/id_ed25519
+    reponse: Identity added: /home/mr/.ssh/id_ed25519 (email_du_compte)
+ - Afficher la clé pour le copier dans le terminal pour le copier dans le champ sur le site:
+ cat ~/.ssh/id_ed25519.pub
