@@ -23,8 +23,19 @@ nous devons d'abord supprimer l'ancienne version:
  7*) Pour installer vs-code vous tapez ceci:
  	sudo snap install code --classic
  
- 8*) Pour installer vlc:
- 	sudo snap install vlc --stable
+ 8*) Soit ceci:
+	- Pour installer vlc:
+     sudo snap install vlc --stable
+	ou
+	- Vous pouvez aussi installer les codecs packs sur linux 
+	et laisser vlc en tapant ceci:
+	sudo apt install ubuntu-restricted-extras
+    - Si vous avez fait une installation minimale je vous 
+	conseille d'aller dans AppCenter et telecharges
+	le logiciel video dot le logo ressemble a un mediator 
+	en guitare
+	Pour la musique je vous conseille Gapless un lecteur 
+	audio leger
  
  9*)Pour installer postman:
  	sudo snap install postman
